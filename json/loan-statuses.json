@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "label": "Document Verification",
+    "value": "DOCUMENT_VERIFICATION"
+  },
+  {
+    "id": 2,
+    "label": "Under Process",
+    "value": "UNDER_PROCESS"
+  },
+  {
+    "id": 3,
+    "label": "Loan Approved",
+    "value": "APPROVED"
+  }
+]

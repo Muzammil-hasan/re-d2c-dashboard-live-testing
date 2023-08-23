@@ -1,0 +1,16 @@
+@import "~/styles/partials/config";
+
+.radioGroupRoot {
+  label {
+    color: color(secondary-foreground);
+    font-size: 14px;
+    line-height: 1;
+    margin-left: 8px;
+  }
+
+  input[type="radio"] {
+    accent-color: color(accent);
+    width: 15px;
+    height: 15px;
+  }
+}

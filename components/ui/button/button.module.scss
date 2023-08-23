@@ -1,0 +1,158 @@
+@import "~/styles/partials/config";
+
+$base_font_size: 0.85rem;
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.375rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 15px;
+  background: none;
+  color: color(foreground);
+  transition: color 0.2s, background-color 0.2s;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  // Sizes
+  &_icon {
+    padding: 0.5rem;
+  }
+
+  &_small {
+    height: 2.4rem;
+    padding: 0.725rem 1.1rem;
+  }
+
+  &_regular {
+    height: 2.5rem;
+    padding: 0.725rem 1.375rem;
+  }
+
+  &_wide {
+    height: 2.25rem;
+    padding: 0.725rem 2.5rem;
+  }
+
+  &_large {
+    font-size: 1.25rem;
+    height: 3.25rem;
+    padding: 0.9rem 5.5rem;
+  }
+
+  &_snug {
+    font-size: 0.75rem;
+    padding: 0.25rem 1rem;
+
+    &_wide {
+      font-size: $base_font_size;
+      padding: 0.5rem 1.375rem;
+    }
+  }
+
+  &_rounded {
+    border-radius: 0.25rem;
+    height: 2.6rem;
+    padding: 0.725rem 1.75rem;
+  }
+
+  // Variants
+  &_outline {
+    background-color: transparent;
+    color: color(foreground);
+    border: 1px solid color(secondary-foreground);
+
+    &:hover {
+      color: color(muted-foreground);
+      background-color: color(muted-background);
+    }
+  }
+
+  &_light {
+    background-color: color(foreground);
+    color: color(background);
+    border: 1.675px solid color(background);
+    font-weight: 600;
+
+    &:hover {
+      color: color(foreground);
+      background-color: color(accent);
+      border: 1.675px solid color(accent);
+    }
+  }
+
+  &_count {
+    color: color(foreground);
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: font(secondary);
+    padding: 0.5rem 0.8rem;
+
+    &:hover,
+    &[data-state="selected"] {
+      background-color: color(accent);
+    }
+  }
+
+  &_link:hover {
+    color: color(secondary-foreground);
+  }
+
+  &_accent {
+    text-transform: uppercase;
+    border: 1px solid color(accent);
+    background-color: color(muted-accent);
+    position: relative;
+    justify-content: space-between;
+
+    &:has(svg) {
+      svg {
+        z-index: 1;
+        position: absolute;
+        right: 10px;
+        font-size: 20px;
+        background-color: color(accent);
+      }
+
+      span {
+        padding: 0 2.5rem;
+        padding-left: 0.3rem;
+      }
+
+      &::after {
+        content: "";
+        height: 100%;
+        width: 2.5rem;
+        background-color: color(accent);
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &:hover {
+      background-color: color(secondary-background);
+    }
+  }
+
+  &_accent_light {
+    text-transform: capitalize;
+    color: color(foreground);
+    background-color: color(accent);
+    font-size: 1rem;
+    height: 2.75rem;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

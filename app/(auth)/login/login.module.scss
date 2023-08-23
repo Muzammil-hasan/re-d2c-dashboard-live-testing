@@ -1,0 +1,177 @@
+@import "~/styles/partials/config";
+
+.login {
+  background-image: url("/images/login_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: calc(100vh - 67px);
+  background-size: cover;
+  position: absolute;
+
+  @include mobile {
+    background-size: cover;
+    background-position: center;
+  }
+  &::before {
+    content: "";
+    background-color: color(background);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.6;
+  }
+  .loginFormContainer {
+    background-color: color(foreground-three);
+    padding: 15px 80px;
+    width: 100%;
+    max-width: 38%;
+    height: calc(100vh - 67px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      padding: 15px 30px;
+      max-width: 45%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      height: auto;
+      bottom: 0;
+      padding: 0;
+      background-color: transparent;
+      // align-items: flex-end;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+    @include tablet-p {
+      max-width: 70%;
+    }
+
+    .loginFormCols {
+      background-color: color(foreground);
+      padding: 35px;
+      width: 100%;
+      border-radius: 2px;
+      .loginLogo {
+        width: 200px;
+        height: 70px;
+        margin: auto;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+    .loginForm {
+      margin-top: 70px;
+      @include mobile {
+        margin-top: 50px;
+      }
+      .loginFormGroup {
+        position: relative;
+        margin-bottom: 35px;
+
+        .loginIcons {
+          position: absolute;
+          top: 7px;
+          left: 0;
+          img {
+            width: 15px;
+          }
+        }
+        input {
+          border: none;
+          border-bottom: 2px solid color(menu-border);
+          border-radius: 0;
+          color: color(background-gray-6);
+          font-weight: 600;
+          font-size: 12px;
+          padding: 10px;
+          padding-left: 28px;
+          &::placeholder {
+            color: color(background-gray-6);
+          }
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            ::placeholder {
+              opacity: 0;
+            }
+          }
+        }
+      }
+      .submitBtn {
+        margin-top: 50px;
+
+        @include mobile {
+          margin-top: 20px;
+        }
+      }
+
+      .error {
+        color: color(accent);
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        font-family: font(secondary);
+      }
+
+      .eyeIcon {
+        padding: 0;
+        border: none;
+        font-size: 18px;
+        color: color(accent);
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        background-color: transparent;
+      }
+    }
+
+    .forgotPass {
+      margin-top: 80px;
+      text-align: center;
+      position: relative;
+      @include mobile {
+        margin-top: 20px;
+      }
+      &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: color(foreground-three);
+        position: absolute;
+        top: 11px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 1;
+      }
+      a {
+        color: color(background);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        display: inline-block;
+        background-color: color(foreground);
+        z-index: 9;
+        position: relative;
+        padding: 0 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@import "~/styles/partials/config";
+
+.section {
+  margin-top: 30px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile {
+    align-items: start;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  > * {
+    width: 50%;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.savedFormSpan {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
+  margin-bottom: 0;
+  color: color(third-border);
+}
+.savedFormLabel {
+  font-weight: 500;
+}
+.saveEditbtn {
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    justify-content: space-between;
+  }
+
+  .savedDetailHeading {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  span {
+    color: color(third-border);
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+
+.bookingDetailsBody {
+  background-color: color(muted201-background);
+
+  @include mobile {
+    padding-left: 0px;
+  }
+
+  .selectSection {
+    @include mobile {
+      flex-direction: column;
+      align-items: unset;
+    }
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+  }
+
+  .motorcycleProfile {
+    display: flex;
+    @include mobile {
+      flex-direction: row;
+    }
+  }
+
+  .detailHeading {
+    font-size: 0.9rem;
+    color: color(foreground);
+    margin: 0px 0 1.5rem 0;
+  }
+
+  .amountData {
+    margin: 25px 0 0px 0;
+    .amountInput {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+
+      .amountLabel {
+        @include mobile {
+          margin-bottom: 5px;
+        }
+        span {
+          font-size: 14px;
+          color: color(secondary-border);
+        }
+      }
+    }
+    .dropdownCustom {
+      button {
+        width: 100%;
+        background-color: color(muted-background);
+        color: color(foreground);
+        border: none;
+        min-height: 38px;
+        // font-family: $font-montserrat;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.profileBikeImg {
+  width: 184px;
+  height: 117px;
+  position: relative;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Head Sec
+.headSec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(var(--color-gray-rgb), 0.25);
+  border-bottom: 1px solid rgba(var(--color-gray-rgb), 0.25);
+  padding: 15px 0;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,33 @@
+@import "~/styles/partials/config";
+
+.invoice {
+  .fullWidth {
+    width: 100%;
+  }
+  &_title {
+    font-size: 14px;
+    font-weight: 500;
+    color: color(foreground);
+  }
+
+  .copy_input {
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .message-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include mobile {
+      margin-top: 10px;
+    }
+  }
+}

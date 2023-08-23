@@ -1,0 +1,114 @@
+@import "~/styles/partials/config";
+
+.headerPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0;
+
+  @include mobile-tablet-p {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerActionSection {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 12px;
+
+    @include mobile-tablet-p {
+      margin-top: 10px;
+    }
+
+    form {
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    @include mobile {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 12px;
+      width: 100%;
+    }
+  }
+
+  .latsEditedText {
+    font-size: 12px;
+    margin-left: 8px;
+    color: color(muted-foreground);
+    display: inline-block;
+
+    span.nameText {
+      font-size: 12px;
+      color: color(foreground);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .filterHeading {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    font-family: font(secondary);
+
+    span {
+      color: color(muted-foreground);
+      font-size: 16px;
+    }
+  }
+  .filterSubTitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: color(muted-foreground);
+    margin-bottom: 0px;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.refreshMain {
+  display: inline-block;
+  font-size: 20px;
+  color: color(e8-foreground);
+  margin-left: 10px;
+  position: relative;
+  bottom: 1px;
+  outline: none;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+  svg {
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+    }
+    .refreshtitle {
+      display: block;
+    }
+  }
+  .refreshtitle {
+    font-size: 12px;
+    color: color(secondary-foreground);
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    white-space: nowrap;
+    display: none;
+  }
+}

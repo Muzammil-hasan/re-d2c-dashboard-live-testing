@@ -1,0 +1,42 @@
+@import "~/styles/partials/config";
+
+.accordion {
+  &_btn {
+    background-color: color(muted-background);
+    margin: 0;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 54px;
+    padding: 0 30px;
+    color: color(foreground);
+    border-radius: 4px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+    svg {
+      transition: transform 0.4s;
+    }
+
+    &.open {
+      border-radius: 4px 4px 0 0;
+
+      svg {
+        transform: scale(-1);
+      }
+    }
+  }
+
+  &_panel {
+    padding: 30px;
+    background-color: color(muted20-background);
+
+    @include mobile {
+      padding: 15px;
+    }
+  }
+}

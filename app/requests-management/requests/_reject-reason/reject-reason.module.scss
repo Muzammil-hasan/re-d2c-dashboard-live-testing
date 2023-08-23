@@ -1,0 +1,33 @@
+@import "~/styles/partials/config";
+
+.reject_dialog {
+  padding: 2rem;
+
+  .form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.5rem;
+  }
+
+  .title {
+    font-size: 16px;
+    font: normal normal medium 20px/26px Guardian Sans;
+    margin-bottom: 2rem;
+  }
+  .radioStyle {
+    margin-bottom: 20px;
+    label {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  .textarea {
+    font-size: 14px;
+    margin: 20px 0 25px 0;
+  }
+
+  button {
+    float: right;
+  }
+}

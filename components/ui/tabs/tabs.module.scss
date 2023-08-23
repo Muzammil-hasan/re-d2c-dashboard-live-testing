@@ -1,0 +1,68 @@
+@import "~/styles/partials/config";
+
+.tabs {
+  &_list {
+    border-bottom: 1px solid color(secondary-foreground);
+    column-gap: 25px;
+    display: flex;
+
+    @include mobile-tablet-p {
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: auto;
+      @include scrollHide;
+    }
+
+    &__item {
+      display: flex;
+      font-weight: 500;
+      color: color(accent);
+      position: relative;
+      color: color(secondary-foreground);
+      transition: color 0.2s, background-color 0.2s;
+
+      &::after {
+        content: "";
+        width: 100%;
+        z-index: 10;
+        bottom: -1px;
+        opacity: 0;
+        height: 0.1rem;
+        position: absolute;
+        background-color: color(accent);
+      }
+
+      a {
+        color: inherit;
+        position: relative;
+        padding: 10px 0px;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        font-weight: 500;
+
+        @include mobile-tablet-p {
+          white-space: nowrap;
+        }
+      }
+
+      &:hover {
+        color: color(foreground);
+
+        &::after {
+          opacity: 1;
+          background-color: color(foreground);
+        }
+      }
+
+      &-active {
+        color: color(accent);
+
+        &::after {
+          opacity: 1;
+          background-color: color(accent);
+        }
+      }
+    }
+  }
+}

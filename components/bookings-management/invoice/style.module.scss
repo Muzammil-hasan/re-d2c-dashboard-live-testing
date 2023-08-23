@@ -1,0 +1,66 @@
+.invoice {
+  .fullWidth {
+    width: 100%;
+  }
+  .invoiceTitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: color(foreground);
+  }
+  .inputLable {
+    font-size: 14px;
+    color: color(third-border);
+  }
+  .uploadInput {
+    position: relative;
+    top: 7px;
+  }
+  .invoiceInput {
+    font-size: 14px;
+    background-color: color(muted-background);
+    color: color(foreground);
+    border: 1px dashed color(muted-background);
+    cursor: pointer;
+    height: 40px;
+
+    &::placeholder {
+      color: color(foreground);
+    }
+  }
+
+  .inputUploadIcon {
+    position: relative;
+    top: -2rem;
+    left: 28%;
+  }
+  .invoiceIcon {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: color(accent);
+  }
+  .invoiceProgress {
+    display: flex;
+    align-items: center;
+    background-color: color(muted-background);
+    border: 1px dashed color(muted-background);
+    border-radius: 5px;
+    height: 40px;
+
+    .invoiceCrossIcon {
+      font-size: 0.7rem;
+      background-color: color(background);
+      font-size: 700;
+      position: relative;
+      border-radius: 50%;
+      top: 0.6rem;
+    }
+
+    .progressBar {
+      width: 80%;
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "index": 0,
+    "done": false,
+    "formId": "booking-form",
+    "status": "MOTORCYCLE_BOOKED",
+    "label": "Motorcycle booked"
+  },
+  {
+    "index": 1,
+    "done": false,
+    "formId": "finance-form",
+    "status": "FINANCE_DISBURSEMENT",
+    "label": "Finance disbursement"
+  },
+  {
+    "index": 2,
+    "done": false,
+    "formId": "payment-form",
+    "status": "BALANCE_PAYMENT",
+    "label": "Balance payment"
+  },
+  {
+    "index": 3,
+    "done": false,
+    "formId": "documents-form",
+    "status": "UPLOAD_DOCUMENT",
+    "label": "Upload document"
+  },
+  {
+    "index": 4,
+    "done": false,
+    "formId": "invoice-form",
+    "status": "INVOICED",
+    "label": "Invoiced"
+  },
+  {
+    "index": 5,
+    "done": false,
+    "formId": "insurance-form",
+    "status": "INSURANCE_PENDING",
+    "label": "Insurance"
+  },
+  {
+    "index": 6,
+    "done": false,
+    "formId": "delivery-form",
+    "status": "PDI_COMPLETED",
+    "label": "Delivery"
+  },
+  {
+    "index": 7,
+    "done": false,
+    "formId": "fixation-form",
+    "status": "HSRP_FIXATION",
+    "label": "HSRP fixation"
+  },
+  {
+    "index": 8,
+    "done": false,
+    "formId": "cancelled-form",
+    "status": "BOOKING_CANCELLED",
+    "label": "Cancelled"
+  },
+  {
+    "index": 9,
+    "done": false,
+    "formId": "completed-form",
+    "status": "BOOKING_COMPLETED",
+    "label": "Completed"
+  }
+]

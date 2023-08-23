@@ -1,0 +1,403 @@
+@import "~/styles/partials/config";
+@import "~/styles/partials/resets";
+
+:root {
+  --background: #0d0d0d;
+  --background-gray-6: #666666;
+  --foreground: #ffffff;
+  --border-foreground: #f3f3f3;
+  --secondary-foreground: #a7a7a7;
+  --brighten-foreground: #e5e3e3;
+  --secondary-background: #181818;
+  --third-background: #131313;
+  --third14-background: #141518;
+  --muted-background: #282828;
+  --muted32-background: #323232;
+  --muted20-background: #202020;
+  --muted201-background: #201f1f;
+  --darker-background: #5b1d1b;
+  --muted-foreground: #cbc6c6;
+  --muteded-foreground: #ededed;
+  --darker-foreground: #632420;
+  --e8-foreground: #e8b016;
+  --8c-foreground: #8c8c8c;
+  --65-foreground: #656565;
+  --d2-foreground: #d2635b;
+  --f1-foreground: #f1df67;
+  --dd-foreground: #dda0dd;
+  --accent: #da291c;
+  --light-accent: #d2841c;
+  --muted-accent: rgba(218, 41, 28, 0.3);
+  --border: #ffffff;
+  --secondary-border: #707070;
+  --third-border: #b1b1b1;
+  --success: #52ae3d;
+  --warning: #da881c;
+  --menu-border: #343434;
+  --foreground-three: #333333;
+  --foreground-two: #222222;
+  --color-primary-rgb: 218, 41, 28;
+  --color-gray-rgb: 222, 226, 230;
+  --color-accent-rgb: 218, 41, 28;
+  --color-muted-rgb: 40, 40, 40;
+  --color-black-rgb: 0, 0, 0;
+  --color-light-gray-rgb: 255, 255, 255;
+  --color-65-foreground-rgb: 101, 101, 101;
+  --color-65-foreground-rgb: 255, 99, 132;
+}
+
+* {
+  @include customScroll;
+}
+
+body {
+  min-height: 100vh;
+  color: color(foreground);
+  font-family: font(primary);
+  background-color: color(background);
+
+  .custom-container {
+    margin-left: 240px;
+    margin-top: 63px;
+    padding: 24px 50px 50px;
+
+    @include mobile-tablet-p {
+      margin-left: 0;
+      padding: 15px;
+      margin-top: 63px;
+    }
+  }
+
+  .status-circle {
+    min-width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    margin-right: 0.5rem;
+
+    &.danger {
+      background-color: color(accent);
+    }
+  }
+}
+.backBtnIcon {
+  color: color(foreground);
+}
+
+.invoiceProgress {
+  .progress-bar_progressRoot__eebzp {
+    height: 5px;
+    width: 94%;
+    background-color: color(foreground);
+
+    .progress-bar_progressIndicator__Vl74E {
+      background-color: color(accent);
+    }
+  }
+}
+
+// show-mini-sidebar
+.show-mini-sidebar {
+  @include desktop {
+    margin-left: 40px !important;
+  }
+}
+
+// mini-sidebar
+.mini-sidebar {
+  max-width: 60px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+  @include mobile {
+    max-width: 100%;
+  }
+
+  li {
+    white-space: nowrap;
+  }
+
+  .nav-item {
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-link {
+    opacity: 0;
+
+    @include mobile {
+      opacity: 1;
+    }
+  }
+
+  @include desktop {
+    &:hover {
+      max-width: 270px;
+
+      .nav-link {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// custom toast
+.custom-toast {
+  background: #222222;
+}
+
+.theme-toast-bar {
+  background: #d9291c;
+}
+
+// mobile-sidebar-active
+
+.mobile-sidebar-hide {
+  @include mobile {
+    left: -100%;
+  }
+}
+.mobile-sidebar-active {
+  @include mobile {
+    left: 0;
+  }
+}
+
+.modal-carousel {
+  .carousel.carousel-slider {
+    .control-arrow {
+      color: color(foreground);
+      font-size: 26px;
+      bottom: 0;
+      padding: 5px;
+      opacity: 1;
+      background: #ccc;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin: 0 10px;
+    }
+  }
+}
+
+// action-header
+.action-header {
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.activeBtn {
+  .filterDropdown {
+    .filterBtn {
+      background-color: color(foreground);
+      color: color(background);
+      font-weight: 600;
+    }
+  }
+}
+
+// React Calendar Style here
+.custom-calender-style {
+  .react-calendar {
+    font-family: font(secondary) !important;
+  }
+
+  .react-calendar__month-view__weekdays {
+    font-weight: 500;
+    opacity: 0.6;
+  }
+
+  .react-calendar__navigation {
+    display: flex;
+    height: 46px;
+    align-items: center;
+    margin: 0;
+    position: relative;
+  }
+
+  .react-calendar__navigation__arrow {
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+    background: none;
+    padding: 0;
+    min-width: auto;
+    cursor: pointer;
+  }
+
+  .react-calendar__navigation__label {
+    position: absolute;
+  }
+
+  .react-calendar__navigation button:enabled:hover,
+  .react-calendar__navigation button:enabled:focus {
+    background: none;
+  }
+
+  .react-calendar__navigation__prev-button {
+    right: 30px;
+  }
+
+  .react-calendar__tile--active {
+    border-radius: 4px;
+  }
+
+  .react-calendar__tile:enabled:hover,
+  .react-calendar__tile:enabled:focus {
+    border-radius: 4px;
+  }
+
+  // Light Style here
+  .light {
+    border: 2px solid color(border-foreground) !important;
+    padding: 10px;
+
+    .react-calendar__month-view__weekdays {
+      color: color(background);
+    }
+
+    .react-calendar__month-view__days__day--weekend {
+      color: color(background);
+    }
+
+    .react-calendar__tile--active {
+      background: color(accent);
+      color: color(foreground);
+    }
+
+    .react-calendar__month-view__days__day--neighboringMonth {
+      color: color(background);
+      opacity: 0.4;
+    }
+
+    // Active Date
+    .react-calendar__tile--now {
+      background: color(accent);
+      border-radius: 4px;
+    }
+    .react-calendar__tile--now:enabled:hover,
+    .react-calendar__tile--now:enabled:focus {
+      background: color(accent);
+    }
+  }
+
+  // Dark Style here
+  .dark {
+    border: 2px solid color(border-foreground) !important;
+    background-color: color(muted-background);
+    color: color(foreground);
+    padding: 10px;
+    border-radius: 4px;
+
+    .react-calendar__month-view__weekdays {
+      color: color(foreground);
+    }
+
+    .react-calendar__month-view__days__day--weekend {
+      color: color(background);
+    }
+
+    .react-calendar__tile--active {
+      background: color(accent);
+      color: color(foreground);
+    }
+
+    .react-calendar__month-view__days__day--neighboringMonth {
+      color: color(foreground);
+      opacity: 0.4;
+    }
+
+    .react-calendar__tile {
+      color: color(foreground);
+    }
+
+    .react-calendar__navigation__label {
+      position: absolute;
+    }
+
+    .react-calendar__navigation button {
+      color: color(foreground);
+    }
+
+    .react-calendar__navigation button:enabled:hover,
+    .react-calendar__navigation button:enabled:focus {
+      background: none;
+    }
+
+    .react-calendar__tile:enabled:hover,
+    .react-calendar__tile:enabled:focus {
+      background: color(muted-accent);
+    }
+
+    // Active Date
+    .react-calendar__tile--now {
+      background: color(accent);
+      border-radius: 4px;
+    }
+    .react-calendar__tile--now:enabled:hover,
+    .react-calendar__tile--now:enabled:focus {
+      background: color(accent);
+    }
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+// titleMedium
+.title-medium {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+// uploadFileStyle
+.upload-file-style {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+// For Request Management page header
+.request-management {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  @include mobile {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dropdown-open-style {
+    right: auto !important;
+  }
+}
+
+.table-responsive {
+  @include customScrollHeight;
+}

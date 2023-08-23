@@ -1,0 +1,70 @@
+@import "~/styles/partials/config";
+
+.dropdown_menu {
+  outline: none;
+  &__content {
+    font-family: font(secondary);
+    background-color: color(foreground);
+    color: color(background);
+    border-radius: 1rem;
+    min-width: 10rem;
+    width: auto;
+    border-radius: 0.2rem;
+    position: absolute;
+    right: 6rem;
+    z-index: 5;
+    transform-origin: top right;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    outline: none;
+
+    button {
+      background: none;
+      border: none;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 0.025rem;
+    top: 0.025rem;
+  }
+
+  &__item {
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 8px 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      opacity: 0.7;
+    }
+  }
+
+  &__separator {
+    height: 0.05rem;
+    background-color: color(secondary-foreground);
+    width: 80%;
+    margin: auto;
+    opacity: 0.2;
+
+    &:last-child {
+      display: none;
+    }
+  }
+}

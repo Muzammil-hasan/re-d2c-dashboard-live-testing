@@ -1,0 +1,152 @@
+@import "~/styles/partials/config";
+
+.filterDropdown {
+  position: relative;
+
+  .filterBtn {
+    background-color: color(background);
+    color: color(foreground);
+    border: 1px solid color(secondary-border);
+    font-size: 12px;
+    font-weight: 500;
+    height: 32px;
+    width: 100%;
+    min-width: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: color(secondary-foreground);
+
+    svg {
+      margin-left: 10px;
+      scale: 1.2;
+    }
+
+    &:open {
+      background-color: color(foreground);
+    }
+  }
+
+  .dropdownOpen {
+    position: absolute;
+    background-color: color(foreground);
+    width: 100%;
+    min-width: 286px;
+    right: 0;
+    top: 40px;
+    z-index: 99;
+    outline: none;
+
+    @include mobile {
+      right: auto;
+    }
+
+    .radio_group {
+      svg {
+        color: color(accent);
+      }
+      label {
+        color: color(secondary-foreground);
+        font-size: 12px;
+      }
+    }
+
+    .filterDropdownCols {
+      color: color(background);
+      background-color: color(foreground);
+      outline: none;
+
+      .headerTitle {
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+        font-family: font(secondary);
+        border-bottom: 2px solid color(accent);
+        padding: 5px 15px;
+        button {
+          font-weight: 500;
+          opacity: 0.6;
+          font-size: 13px;
+          cursor: pointer;
+          border-style: none;
+          background: color(foreground);
+        }
+      }
+    }
+  }
+
+  .filterAccordion {
+    margin: 0 15px 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid color(muted-foreground);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .accordianButton {
+      background-color: color(foreground);
+      color: color(background);
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: none;
+      padding: 8px 0;
+      width: 100%;
+      font-family: font(secondary);
+    }
+
+    .panelStyle {
+      .radioList {
+        margin: 10px 0;
+        label {
+          color: color(background);
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+
+      .filterPanleSearch {
+        margin-bottom: 10px;
+        button {
+          background-color: color(foreground);
+          border: 1px solid color(muted-foreground);
+          height: 32px;
+        }
+        input {
+          background-color: color(foreground);
+          border: 1px solid color(muted-foreground);
+          padding-left: 15px;
+          height: 2.3rem;
+
+          &::placeholder {
+            color: color(background);
+          }
+        }
+      }
+    }
+  }
+}
+
+.applyBtn {
+  padding: 15px;
+  width: 100%;
+  border-top: 1px solid color(8c-foreground);
+  margin-top: 30px;
+
+  button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: color(accent);
+    a {
+      text-decoration: none;
+      color: color(foreground);
+      text-transform: capitalize;
+    }
+  }
+}

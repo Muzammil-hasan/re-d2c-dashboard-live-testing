@@ -1,0 +1,94 @@
+@import "~/styles/partials/config";
+
+.pieBigContainer {
+  background-color: color(muted-background);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  // No data found Style
+  .noDataStyle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 0px;
+    }
+
+    .assetsStyle {
+      border: 1px solid #707070;
+      background: #da291c;
+      padding: 70px;
+      border-radius: 200px;
+      min-width: 280px;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      @include mobile {
+        scale: 0.9;
+      }
+
+      span {
+        position: relative;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        content: "";
+        border-radius: 50%;
+        background: color(muted-background);
+      }
+    }
+
+    .textStyle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        background-color: red;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

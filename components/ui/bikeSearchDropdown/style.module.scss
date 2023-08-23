@@ -1,0 +1,136 @@
+@import "~/styles/partials/config";
+
+.headerContainer {
+  width: 100%;
+  min-height: 63px;
+
+  .logoBox {
+    position: relative;
+    height: 40px;
+    width: 200px;
+
+    .logo {
+      display: inline-block;
+
+      img {
+        width: 100%;
+        max-width: 150px;
+      }
+    }
+  }
+
+  .headRightSec {
+    display: flex;
+    border-radius: 0;
+    align-items: center;
+    position: relative;
+    padding: 15px 20px;
+
+    .notifications {
+      position: relative;
+      cursor: pointer;
+      color: color(foreground);
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.08);
+        svg {
+          opacity: 0.8;
+        }
+      }
+
+      svg {
+        font-size: 20px;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+  .toggleButton {
+    background: none;
+    border: none;
+    display: none;
+    padding: 0;
+
+    @include mobile-tablet-p {
+      display: inline-flex;
+    }
+  }
+}
+.customDropdown {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+
+  .dropdownButton {
+    background: none;
+    border: none;
+    padding: 0;
+    color: white;
+    align-items: center;
+    gap: 0 10px;
+  }
+  .searchInput {
+    input {
+      min-height: 39px;
+      background-color: color(muted-background);
+      font-size: 14px;
+      font-weight: 500;
+      color: color(secondary-foreground);
+      border: 0px;
+      border-radius: 0px;
+      resize: none;
+
+      &:focus,
+      :hover {
+        background-color: color(muted-background);
+        color: color(foreground);
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }
+  .dropdownItems {
+    position: absolute;
+    background-color: color(background);
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 20px;
+    top: 55px;
+    min-height: auto;
+    background-color: color(third14-background);
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: 0;
+    z-index: 9;
+
+    a {
+      color: color(foreground);
+      text-decoration: none;
+      border-bottom: 1px solid color(secondary-border);
+      padding: 12px 0px;
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      &:hover,
+      :focus {
+        background-color: transparent;
+        color: color(accent);
+      }
+    }
+  }
+}
+.headRightSec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: color(muted-background);
+
+  .userProfile {
+    margin-left: 35px;
+    padding-right: 20px;
+  }
+}

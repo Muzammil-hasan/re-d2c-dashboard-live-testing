@@ -1,0 +1,80 @@
+@import "~/styles/partials/config";
+
+.listbox {
+  position: relative;
+  width: 100%;
+
+  &_button {
+    background: color(muted-background);
+    border: transparent;
+    color: color(foreground);
+    font-size: 0.875rem;
+    font-weight: 400;
+    height: 2.75rem;
+    // padding-left: 1.75rem;
+    // padding-right: 1rem;
+    padding: 8px 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+      transition: transform 0.4s;
+    }
+
+    &.open {
+      svg {
+        transform: scale(-1);
+      }
+    }
+  }
+
+  &_options {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    background-color: color(foreground);
+    z-index: 2;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    li {
+      white-space: nowrap;
+      color: color(background);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 4px;
+      background-color: transparent;
+
+      &:hover {
+        background-color: rgba(var(--color-65-foreground-rgb), 0.1);
+      }
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    a {
+      white-space: nowrap;
+      color: color(background);
+      border-bottom: 1px solid color(third-border);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 14px 21px;
+      cursor: pointer;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+}

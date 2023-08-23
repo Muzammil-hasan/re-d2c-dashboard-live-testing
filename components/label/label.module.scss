@@ -1,0 +1,10 @@
+@import "~/styles/partials/config";
+
+.label {
+  font-size: 0.875rem;
+  color: color(foreground);
+
+  &.muted {
+    opacity: 0.7;
+  }
+}

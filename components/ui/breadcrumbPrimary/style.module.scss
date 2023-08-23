@@ -1,0 +1,80 @@
+@import "~/styles/partials/config";
+
+.breadcrumbsMain {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .breadcrumbs {
+    display: flex;
+    border-radius: 0.3rem;
+    overflow: hidden;
+
+    .breadcrumbsItem {
+      display: flex;
+      font-size: 12px;
+      align-items: center;
+      background: color(muted-background);
+      color: color(foreground);
+      outline: none;
+      margin-right: 6px;
+      padding: 7px 8px 7px 28px;
+      position: relative;
+      text-decoration: none;
+      cursor: pointer;
+      @include mobile {
+        padding: 8px 0px 8px 24px;
+        font-size: 11px;
+      }
+
+      &:hover {
+        &:after {
+          background: color(muted-background);
+        }
+        background: color(muted-background);
+      }
+      &:focus {
+        &:after {
+          background: color(muted32-background);
+          color: color(foreground);
+        }
+        background: color(muted32-background);
+        color: color(foreground);
+      }
+      &:after {
+        background: color(muted-background);
+        bottom: 0;
+        clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+        content: "";
+        left: 100%;
+        position: absolute;
+        top: 0;
+
+        width: 3em;
+        z-index: 1;
+      }
+      &:before {
+        content: "";
+        top: 0;
+        background: color(background);
+        clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+        position: absolute;
+        width: 3em;
+        bottom: 0px;
+        left: 0px;
+        border: none;
+      }
+      &:first-child {
+        padding-left: 20px;
+        &::before {
+          background: color(muted-background);
+        }
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+    .itemNone {
+      display: none;
+    }
+  }
+}

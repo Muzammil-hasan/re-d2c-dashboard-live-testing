@@ -1,0 +1,121 @@
+@import "~/styles/partials/config";
+
+.hsrpDetails {
+  color: color(foreground);
+  width: 100%;
+
+  .fullWidth {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  .hsrpFlex {
+    display: flex;
+    align-items: center;
+    padding: 0 0 15px 0;
+
+    @include mobile {
+      margin-bottom: 0.5rem;
+    }
+
+    .headerTitle {
+      font-size: 12px;
+      margin-right: 16px;
+      color: color(secondary-foreground);
+      display: flex;
+      align-items: center;
+
+      @include mobile {
+        margin-bottom: 0;
+      }
+
+      span {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+    }
+
+    .status {
+      width: 100%;
+      max-width: 6rem;
+      height: 30px;
+      background-color: color(darker-foreground);
+      border: none;
+      border-radius: 5px;
+      color: color(foreground);
+      padding: 0.4rem 0px 0px 0.4rem;
+      font-size: 12px;
+    }
+  }
+
+  .title {
+    font-size: 14px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+  .dateTimeFlex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .flex {
+    display: flex;
+    align-items: first baseline;
+
+    span {
+      text-decoration: underline;
+      color: color(secondary-foreground);
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    font-size: 14px;
+    color: color(secondary-foreground);
+    margin-top: 0.5rem;
+
+    @include mobile {
+      font-size: 11px;
+    }
+  }
+
+  .updatebutton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include mobile {
+      margin-top: 1rem;
+    }
+
+    @include tablet-p {
+      position: relative;
+      right: 6rem;
+    }
+  }
+
+  .checkboxWrapper {
+    label {
+      font-size: 15px;
+      margin-left: 1rem;
+    }
+  }
+}

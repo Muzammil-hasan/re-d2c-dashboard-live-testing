@@ -1,0 +1,51 @@
+@import "~/styles/partials/config";
+
+.dialog {
+  padding: 1.5rem;
+  width: 52rem;
+  height: 100%;
+
+  &_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: color(foreground);
+    padding-bottom: 1rem;
+    @include mobile {
+      margin-top: 25px;
+    }
+  }
+
+  &_title {
+    font-family: font(secondary);
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  &_form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 1rem;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+    .fullWidth {
+      grid-column: 1 / span 2;
+    }
+
+    &__submit-btn {
+      grid-column: 1 / span 2;
+      justify-self: center;
+      margin-top: 1rem;
+    }
+  }
+
+  .message-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}

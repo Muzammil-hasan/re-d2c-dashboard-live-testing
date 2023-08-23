@@ -1,0 +1,53 @@
+@import "~/styles/partials/config";
+
+.dashboardTable {
+  @include mobile {
+    overflow-x: scroll;
+  }
+  tr {
+    th {
+      background: color(muted-background) !important;
+      border: 1px solid color(secondary-background);
+      font-weight: 500;
+      text-align: center;
+      color: color(foreground);
+      padding: 12px 20px;
+      font-family: font(secondary);
+
+      &:nth-child(01) {
+        text-align: left;
+      }
+    }
+  }
+
+  tr {
+    td {
+      border: 1px solid color(secondary-background);
+      text-align: center;
+      font-size: 12px;
+      background-color: color(secondary-background);
+      color: color(foreground);
+      padding: 12px 20px;
+
+      &:nth-child(01) {
+        text-align: left;
+        font-size: 14px;
+      }
+
+      &.tdFirst {
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+    &:nth-child(even) {
+      td {
+        background-color: color(secondary-background);
+      }
+    }
+    &:nth-child(odd) {
+      td {
+        background-color: color(muted-background);
+      }
+    }
+  }
+}

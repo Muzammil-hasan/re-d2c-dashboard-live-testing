@@ -1,0 +1,83 @@
+@import "~/styles/partials/config";
+
+.documentsModal {
+  .main {
+    padding: 1rem;
+    background-color: color(secondary-background);
+  }
+  .carousel {
+    margin: 0 1rem;
+
+    .loader {
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .documentFlex {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+
+    .formCols {
+      margin-right: 3rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      label {
+        font-size: 14px;
+        color: color(foreground);
+        margin: 0.1rem 0 0 0.5rem;
+      }
+    }
+  }
+  h5 {
+    font-size: 14px;
+    color: color(foreground);
+    margin: 1rem 1rem;
+    opacity: 1;
+  }
+
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: 1rem;
+  }
+
+  .text {
+    color: color(foreground);
+    opacity: 1;
+    margin: 0 1rem;
+    border: 1px solid color(muted-background);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: color(muted-background);
+
+    p {
+      font-size: 12px;
+      margin: 5px;
+    }
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    a {
+      text-decoration: underline;
+      color: color(foreground);
+      font-size: 12px;
+    }
+    .previous {
+      margin-right: 0.5rem;
+    }
+    .next {
+      margin-left: 0.5rem;
+    }
+  }
+}

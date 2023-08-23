@@ -1,0 +1,106 @@
+@import "~/styles/partials/config";
+.cancelBooking {
+  background-color: color(muted201-background);
+  //  height: 100vh;
+  padding: 1rem 2rem;
+
+  .cancelBookingTitle {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 1rem 0;
+  }
+  .cancelBookingText {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0.8rem 0 0 0;
+  }
+  .textLight {
+    color: color(secondary-border);
+  }
+  .textDark {
+    color: color(third-border);
+    font-family: font(secondary);
+  }
+
+  .motercycleDetailsContent {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
+    .motercycleDetailsImg {
+      width: 30%;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+    .motercycleDetailsData {
+      width: 40%;
+      @include mobile {
+        width: 100%;
+      }
+
+      .motercycleDetailsDataInfo {
+        color: color(e8-foreground);
+        font-size: 16px;
+        font-size: 100;
+        display: flex;
+        align-items: center;
+        @include mobile {
+          font-size: 14px;
+        }
+
+        .infoIcon {
+          margin: 0 0.5rem;
+
+          @include mobile {
+            margin: 0.5rem 0.1rem;
+          }
+        }
+      }
+
+      .motercycleDetailsDataTitle {
+        font-size: 24px;
+        font-weight: bold;
+
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          opacity: 60%;
+        }
+      }
+    }
+  }
+}
+
+.headerStyle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  .leftSec {
+    display: flex;
+    align-items: center;
+    gap: 0 22px;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    span {
+      opacity: 0.7;
+      margin-left: 10px;
+    }
+  }
+
+  .title3 {
+    font-size: 24px;
+    margin: 0;
+  }
+}

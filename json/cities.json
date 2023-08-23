@@ -1,0 +1,46 @@
+[
+  {
+    "label": "Noida",
+    "value": "Noida"
+  },
+  {
+    "label": "Ghaziabad",
+    "value": "Ghaziabad"
+  },
+  {
+    "label": "Gautam Buddha Nagar",
+    "value": "Gautam Buddha Nagar"
+  },
+  {
+    "label": "Faridabad",
+    "value": "Faridabad"
+  },
+  {
+    "label": "Gurgaon",
+    "value": "Gurgaon"
+  },
+  {
+    "label": "Delhi",
+    "value": "Delhi"
+  },
+  {
+    "label": "New Delhi",
+    "value": "New Delhi"
+  },
+  {
+    "label": "Chennai",
+    "value": "Chennai"
+  },
+  {
+    "label": "Chengalpattu",
+    "value": "Chengalpattu"
+  },
+  {
+    "label": "Tiruvallur",
+    "value": "Tiruvallur"
+  },
+  {
+    "label": "Kanchipuram",
+    "value": "Kanchipuram"
+  }
+]

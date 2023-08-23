@@ -1,0 +1,55 @@
+@import "~/styles/partials/config";
+
+.insuranceMain {
+  padding: 0;
+  @include mobile {
+    padding: 0;
+  }
+
+  .insuranceForm {
+    margin: 20px 0;
+
+    .title {
+      color: color(foreground);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-size: 0.8rem;
+    }
+  }
+
+  .uploadCancelBtn {
+    margin-top: 25px;
+  }
+}
+
+.formCols {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+}
+
+.copy_input {
+  position: relative;
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+
+  .decisionBtn {
+    margin-top: 1.75rem;
+  }
+}

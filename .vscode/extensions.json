@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "steoates.autoimport",
+    "formulahendry.auto-rename-tag",
+    "streetsidesoftware.code-spell-checker",
+    "wix.vscode-import-cost",
+    "esbenp.prettier-vscode"
+  ]
+}

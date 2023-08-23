@@ -1,0 +1,130 @@
+@import "~/styles/partials/config";
+
+.motorcycleInfoMain {
+  background-color: color(muted-background);
+  padding: 18px;
+
+  .motorcycleInfoFlex {
+    display: flex;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .motorcycleInfoImg {
+      width: 100%;
+      min-width: 142px;
+      height: 79px;
+      margin-right: 20px;
+
+      @include mobile {
+        margin-right: 0;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .motorcycleInfo {
+
+      .titleSection {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .modelTitle {
+          font-size: 24px;
+          font-weight: 600;
+          color: color(foreground);
+          font-weight: bold;
+        }
+
+        .subStyle {
+          font-weight: 400;
+          opacity: 0.6;
+          font-size: 16px;
+          padding: 0 10px;
+        }
+
+        .orderID {
+          font-size: 12px;
+          color: color(secondary-border);
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          
+          .dotStyle {
+            font-size: 5px;
+            
+            @include mobile {
+              margin: 0;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+
+      .detailColsFlex {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        @include mobile {
+          margin-top: 15px;
+          flex-wrap: wrap;
+        }
+
+        .detailCols {
+          display: flex;
+          justify-content: space-between;
+          width: 50%;
+          font-size: 12px;
+          flex-wrap: wrap;
+          border-right: 1px solid color(secondary-border);
+
+          @include mobile {
+            width: 100%;
+            border-right: none;
+          }
+
+          &:first-child {
+            padding-right: 15px;
+            @include mobile {
+              padding-right: 0;
+            }
+          }
+
+          &:last-child {
+            border-right: none;
+            padding-left: 15px;
+            @include mobile {
+              padding-left: 0;
+            }
+          }
+
+          .detailItem {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 2px 0;
+
+            .detailTitle {
+              color: color(third-border);
+              font-weight: 500;
+            }
+
+            a {
+              color: color(foreground);
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "~/styles/partials/config";
+
+.table {
+  border-spacing: 0;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  font-size: 0.9rem;
+
+  &_head {
+    background-color: color(muted-background);
+    color: color(secondary-foreground);
+  }
+
+  &_body {
+    background-color: color(secondary-background);
+  }
+
+  &_head,
+  &_body {
+    tr {
+      height: 3.5rem;
+
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  th,
+  td {
+    padding: 0 2rem;
+    white-space: nowrap;
+    padding: 0.7rem 1rem;
+    font-weight: 400;
+    border-bottom: 1px solid color(muted-background);
+
+    &:first-child,
+    &:first-child {
+      padding-left: 1.5rem;
+    }
+
+    @include mobile {
+      white-space: nowrap;
+    }
+  }
+}

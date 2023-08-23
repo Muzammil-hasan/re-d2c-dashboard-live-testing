@@ -1,0 +1,27 @@
+@import "~/styles/partials/config";
+
+.secondaryBtnCustom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0 35px;
+  margin-top: 40px;
+
+  @include mobile-tablet-p {
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  button {
+    height: 40px;
+    gap: 0 8px;
+    color: color(muted-foreground);
+    margin-left: 12px;
+    font-size: 14px;
+
+    @include mobile-tablet-p {
+      height: 35px;
+      gap: 0 6px;
+    }
+  }
+}

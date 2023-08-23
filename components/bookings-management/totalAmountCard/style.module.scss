@@ -1,0 +1,43 @@
+@import "~/styles/partials/config";
+
+.totalAmount {
+  background-color: color(muted-background);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+
+  .totalAmountTitle {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .amountText {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .itemStyle {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .textLight {
+    color: color(secondary-border);
+
+    span {
+      color: color(accent);
+    }
+  }
+  .textDark {
+    color: color(third-border);
+    font-family: font(secondary);
+  }
+}
+
+.noteStyle {
+  font-style: italic;
+  font-size: 12px;
+  color: color(secondary-foreground);
+}

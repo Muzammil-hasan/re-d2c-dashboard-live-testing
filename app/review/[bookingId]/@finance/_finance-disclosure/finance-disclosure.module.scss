@@ -1,0 +1,320 @@
+@import "~/styles/partials/config";
+
+.financeMain {
+  width: 100%;
+
+  .fullWidth {
+    width: 100%;
+
+    .formLabel {
+      color: color(secondary-border);
+    }
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  .formTitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: color(foreground);
+    span {
+      font-size: 12px;
+      color: color(secondary-border);
+      margin-left: 10px;
+      @include mobile {
+        width: 100%;
+        display: block;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .financeFlex {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    @include mobile {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .radioCols {
+      margin-right: 70px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .statusTitle {
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    .title {
+      font-size: 12px;
+      margin-right: 10px;
+      color: color(muted-foreground);
+      display: flex;
+      align-items: center;
+
+      span {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+    }
+
+    .formCols {
+      margin-right: 20px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .dropdownCols {
+      width: 100%;
+      max-width: 197px;
+
+      button {
+        height: 30px;
+        background-color: color(darker-foreground);
+        border: none;
+        border-radius: 3px;
+        color: color(foreground);
+        span {
+          top: 4px;
+          font-size: 11px;
+        }
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      color: color(secondary-border);
+      font-size: 12px;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .financeDetails {
+    color: color(foreground);
+    margin-bottom: 15px;
+
+    .title2 {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .detailsFlex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include mobile {
+        display: block;
+      }
+
+      .detailsCols {
+        @include mobile {
+          width: 100%;
+        }
+
+        .subtitle {
+          color: color(secondary-border);
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .detailsInput {
+          position: relative;
+
+          &.input_flexInput {
+            width: 95%;
+          }
+
+          .inputIcon {
+            position: absolute;
+            right: 50px;
+            top: 51px;
+            color: color(foreground);
+          }
+
+          .rejectBtn {
+            cursor: pointer;
+            position: absolute;
+            right: 13px;
+            top: 52px;
+            border-left: 1px solid #ccc;
+            padding-left: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  .paymentLink {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    button {
+      margin-left: 10px;
+
+      @include mobile {
+        width: 100%;
+        max-width: 240px;
+        margin-left: auto;
+        margin-top: 10px;
+      }
+    }
+  }
+  .detailsInputDisabled {
+    opacity: 0.4;
+  }
+
+  .updateAmountMain {
+    margin-top: 0px;
+
+    .buttonSection {
+      display: flex;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      @include mobile {
+        margin-top: 15px;
+        margin-bottom: 0;
+      }
+    }
+
+    .updateInfo {
+      cursor: pointer;
+      max-width: 60%;
+      margin: 0 auto;
+      background: none;
+      border: 0;
+
+      @include mobile {
+        max-width: 100%;
+      }
+
+      .updateInfoIcon {
+        display: flex;
+        justify-content: center;
+        color: color(light-accent);
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: color(foreground);
+    }
+  }
+
+  .amountBreakup {
+    .title {
+      font-size: 14px;
+      padding-bottom: 10px;
+      color: color(foreground);
+      font-weight: 500;
+    }
+
+    .breakupFlex {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+
+      .breakupTitle {
+        font-size: 16px;
+        font-weight: 500;
+        color: color(foreground);
+        opacity: 0.8;
+        @include mobile {
+          font-size: 14px;
+          width: 100%;
+        }
+      }
+
+      .subtitle {
+        width: 100%;
+        max-width: 200px;
+        text-align: left;
+        color: color(foreground);
+        font-weight: 500;
+        @include mobile {
+          text-align: right;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.disbursalAmount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+  padding: 0 0 15px;
+  border-top: 1px solid color(secondary-border);
+  border-bottom: 1px solid color(secondary-border);
+
+  .disburseInput {
+    width: 100%;
+    max-width: 30%;
+  }
+}
+
+.linkBtn {
+  margin-top: 30px;
+  @include mobile {
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    margin-top: 15px;
+  }
+}
+
+.radio_group {
+  display: flex;
+  align-items: center;
+  flex-direction: row !important;
+  column-gap: 4rem;
+}
+
+.separator {
+  height: 1px;
+  background-color: color(secondary-border);
+  width: 100%;
+  display: block;
+}
+
+.disbursalTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: color(foreground);
+
+  @include mobile {
+    font-size: 16px;
+    white-space: nowrap;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+}

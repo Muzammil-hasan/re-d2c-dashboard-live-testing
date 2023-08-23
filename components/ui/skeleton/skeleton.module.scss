@@ -1,0 +1,7 @@
+@import "~/styles/partials/config";
+
+.skeleton {
+  @extend .pulse;
+  background-color: color(muted-background);
+  border-radius: 1rem;
+}

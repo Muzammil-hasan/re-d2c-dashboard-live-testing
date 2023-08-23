@@ -1,0 +1,70 @@
+@import "~/styles/partials/config";
+
+.animatedMain {
+  display: flex;
+  border: 1px solid color(accent);
+  width: fit-content;
+  position: relative;
+  background-color: color(muted-accent);
+
+  &::before {
+    content: "";
+    width: 0.5px;
+    height: 65%;
+    background-color: color(secondary-border);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .buttonStyle {
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+    color: color(foreground);
+    font-size: 18px;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    width: 40px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: rgba(var(--color-accent-rgb), 0.1);
+    }
+  }
+}
+
+.borderNone {
+  border: none;
+  background: none;
+
+  &::before {
+    display: none;
+  }
+}
+
+.base_btn {
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  color: color(foreground);
+  border: 1px solid color(success);
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnCheckStyle {
+  @extend .base_btn;
+  background: color(success);
+}
+
+.btnCloseStyle {
+  @extend .base_btn;
+  border: none;
+  background: color(accent);
+}

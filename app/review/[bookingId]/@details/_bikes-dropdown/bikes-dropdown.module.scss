@@ -1,0 +1,154 @@
+@import "~/styles/partials/config";
+
+.muted-background {
+  background-color: color(muted-background);
+}
+
+.listbox {
+  position: relative;
+  width: 100%;
+
+  .value {
+    margin: 0;
+    display: inline-flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    @include mobile {
+      display: flow;
+      font-size: 12px;
+    }
+
+    span:not(:first-child)::before {
+      content: "-";
+      margin-right: 0.5rem;
+    }
+
+    &_cc {
+      opacity: 0.8;
+    }
+
+    &_variant {
+      opacity: 0.6;
+    }
+  }
+
+  &_button {
+    @extend .muted-background;
+    border: transparent;
+    color: color(foreground);
+    font-size: 0.95rem;
+    font-weight: 400;
+    height: 4rem;
+    // padding-left: 1.75rem;
+    // padding-right: 1rem;
+    padding: 8px 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+      transition: transform 0.4s;
+    }
+
+    &.open {
+      svg {
+        transform: scale(-1);
+      }
+    }
+  }
+
+  &_options {
+    @extend .scrollbar;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    padding: 1rem 10px 0 10px;
+    list-style: none;
+    margin: 0;
+    background-color: color(third14-foreground);
+    z-index: 2;
+    max-height: 18.5rem;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .separator {
+      width: 100%;
+      height: 0.05rem;
+      opacity: 0.2;
+      background-color: color(third-border);
+    }
+
+    input {
+      @extend .muted-background;
+      height: 3rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 0px;
+      border-radius: 0px;
+      margin-bottom: 0.25rem;
+      color: color(foreground) !important;
+
+      @include mobile {
+        font-size: 12px;
+      }
+
+      &::placeholder {
+        color: color(secondary-foreground);
+      }
+
+      &:focus {
+        @extend .muted-background;
+        box-shadow: none;
+        outline: none;
+        border: none;
+      }
+    }
+
+    li {
+      padding-left: 0.5rem;
+
+      .value {
+        white-space: nowrap;
+        color: color(foreground);
+        font-size: 0.95rem;
+        cursor: pointer;
+        height: 3.5rem;
+        display: flex;
+        width: 100%;
+
+        @include mobile {
+          font-size: 11px;
+        }
+
+        span {
+          opacity: 1 !important;
+        }
+      }
+
+      &:last-child .separator {
+        display: none;
+      }
+    }
+  }
+}
+
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    @extend .muted-background;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #656565;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken(#656565, 10%);
+  }
+}

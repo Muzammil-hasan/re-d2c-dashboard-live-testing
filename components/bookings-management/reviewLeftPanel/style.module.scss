@@ -1,0 +1,176 @@
+@import "~/styles/partials/config";
+
+.reviewLeftPanel {
+  width: 100%;
+  background-color: color(muted-background);
+  padding-bottom: 50px;
+  min-width: 314px;
+  width: 314px;
+  border-radius: 4px;
+
+  @include mobile-tablet-p {
+    background-color: transparent;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  .title {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    max-width: 80%;
+
+    @include mobile {
+      padding: 0px;
+    }
+  }
+
+  .reviewLeftPanelNav {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include mobile-tablet-p {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      margin: 25px -10px;
+      @include scrollHide;
+    }
+
+    &::before {
+      content: "";
+      width: 0.5px;
+      height: 89%;
+      background-color: color(secondary-border);
+      position: absolute;
+      top: 50%;
+      left: 23px;
+      transform: translate(0, -50%);
+
+      @include mobile-tablet-p {
+        display: none;
+      }
+    }
+
+    li {
+      list-style-type: none;
+      padding-left: 50px;
+      position: relative;
+
+      @include mobile-tablet-p {
+        padding-left: 0;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .checkActive {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: color(secondary-border);
+        position: absolute;
+        left: 18px;
+        top: 25px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+
+        @include mobile-tablet-p {
+          display: none;
+        }
+        svg {
+          display: none;
+        }
+      }
+
+      p {
+        display: block;
+        padding: 20px 15px;
+        color: color(secondary-border);
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px solid color(foreground-three);
+        margin: 0;
+
+        @include mobile-tablet-p {
+          white-space: nowrap;
+          border-bottom: none;
+          font-size: 14px;
+          padding: 10px 20px;
+          border-radius: 50px;
+        }
+      }
+
+      &.active {
+        p {
+          background-color: color(darker-background);
+          color: color(brighten-foreground);
+          padding: 10px 20px;
+        }
+        .checkActive {
+          display: inline-flex;
+          background-color: color(accent);
+
+          @include mobile-tablet-p {
+            display: none;
+          }
+          svg {
+            display: none;
+          }
+        }
+
+        &::after {
+          content: "";
+          background-color: color(accent);
+          width: 22px;
+          height: 22px;
+          position: absolute;
+          top: 19px;
+          left: 12px;
+          border-radius: 50%;
+          opacity: 0.5;
+
+          @include mobile-tablet-p {
+            display: none;
+          }
+        }
+      }
+
+      &.checked {
+        p {
+          background-color: transparent;
+        }
+        .checkActive {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: color(accent);
+          position: absolute;
+          left: 13px;
+          top: 18px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+
+          @include mobile-tablet-p {
+            display: none;
+          }
+          svg {
+            display: block;
+          }
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

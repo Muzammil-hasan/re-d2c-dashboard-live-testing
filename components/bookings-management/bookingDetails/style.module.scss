@@ -1,0 +1,94 @@
+@import "~/styles/partials/config";
+
+.bookingDetailsBody {
+  background-color: color(muted201-background);
+
+  .fullWidth {
+    width: 100%;
+  }
+
+  @include mobile {
+    padding-left: 0px;
+  }
+
+  .selectSection {
+    @include mobile {
+      flex-direction: column;
+      align-items: unset;
+    }
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+  }
+
+  .motorcycleProfile {
+    display: flex;
+    @include mobile {
+      flex-direction: row;
+    }
+  }
+
+  .detailHeading {
+    margin: 0px 0 15px 0;
+    span {
+      font-size: 14px;
+      color: color(foreground);
+    }
+  }
+
+  .titleBorder {
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      color: color(foreground);
+      margin: 25px 0 20px 0;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 500;
+      color: color(foreground);
+    }
+  }
+  .amountData {
+    margin: 25px 0 0px 0;
+    .amountInput {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+
+      .amountLabel {
+        @include mobile {
+          margin-bottom: 5px;
+        }
+        span {
+          font-size: 14px;
+          color: color(secondary-border);
+        }
+      }
+    }
+    .dropdownCustom {
+      button {
+        width: 100%;
+        background-color: color(muted-background);
+        color: color(foreground);
+        border: none;
+        min-height: 38px;
+        // font-family: $font-montserrat;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.profileBikeImg {
+  width: 184px;
+  height: 117px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

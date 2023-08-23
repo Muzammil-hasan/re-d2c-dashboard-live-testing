@@ -1,0 +1,25 @@
+@import "~/styles/partials/config";
+
+.form {
+  &_item {
+    margin: 0.5rem 0;
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    flex-grow: 2;
+  }
+
+  &_error {
+    font-size: 0.875rem;
+    color: color(accent);
+    margin: 0;
+    padding-right: 0.5rem;
+    opacity: 0.6;
+  }
+
+  &_description {
+    font-size: 0.875rem;
+    color: color(third-border);
+    margin: 0;
+  }
+}

@@ -1,0 +1,113 @@
+@import "~/styles/partials/config";
+
+.pieSmallContainer {
+  background-color: color(muted-background);
+  padding: 1rem;
+
+  @include mobile-tablet-p {
+    width: 100%;
+  }
+
+  @include mobile {
+    margin-top: 30px;
+  }
+
+  h5 {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .pieChart {
+    background-color: color(dd-foreground);
+    height: 50%;
+    width: 70%;
+    border-radius: 50%;
+    margin: 1rem 0;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .pie1 {
+    background-color: color(d2-foreground);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .pie2 {
+    background-color: color(f1-foreground);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  // No data found Style
+  .noDataStyle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .assetsStyle {
+      border: 1px solid color(secondary-border);
+      background: color(d2-foreground);
+      padding: 70px;
+      border-radius: 200px;
+      min-width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      span {
+        position: relative;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 90px;
+        height: 90px;
+        margin: auto;
+        content: "";
+        border-radius: 50%;
+        background: color(muted-background);
+      }
+    }
+
+    .textStyle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        background-color: color(d2-foreground);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

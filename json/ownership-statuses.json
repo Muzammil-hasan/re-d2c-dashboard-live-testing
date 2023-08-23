@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "label": "First Motorcycle",
+    "value": "FIRST_MOTORCYCLE"
+  },
+  {
+    "id": 2,
+    "label": "Second Motorcycle",
+    "value": "SECOND_MOTORCYCLE"
+  },
+  {
+    "id": 3,
+    "label": "Third Motorcycle",
+    "value": "THIRD_MOTORCYCLE"
+  }
+]

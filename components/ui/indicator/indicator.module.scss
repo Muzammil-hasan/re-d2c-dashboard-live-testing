@@ -1,0 +1,25 @@
+@import "~/styles/partials/config";
+
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  .indicator {
+    height: 0.325rem;
+    width: 0.375rem;
+    border-radius: 100%;
+
+    &_success {
+      background-color: color(success);
+    }
+
+    &_danger {
+      background-color: color(accent);
+    }
+
+    &_warning {
+      background-color: color(warning);
+    }
+  }
+}

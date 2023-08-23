@@ -1,0 +1,91 @@
+@import "~/styles/partials/config";
+
+.uploadDocumentStyle {
+  .flex {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: underline;
+      font-size: 12px;
+      color: color(secondary-foreground);
+      opacity: 1;
+      margin-left: 0.8rem;
+    }
+  }
+
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+      letter-spacing: 0px;
+      color: color(foreground);
+      opacity: 1;
+      text-align: left;
+      font-size: 14px;
+      margin-right: 0.8rem;
+    }
+
+    .contactLabel {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0px;
+      color: color(third-border);
+      opacity: 1;
+    }
+
+    .formControl {
+      margin-top: 0.5rem;
+      label {
+        font-size: 12px;
+        color: color(secondary-foreground);
+      }
+      svg {
+        cursor: pointer;
+      }
+    }
+
+    .contactInput {
+      min-height: 38px;
+      color: color(foreground);
+      font-size: 14px;
+      font-weight: 400;
+      border: 0px;
+      border-radius: 5px;
+      resize: none;
+
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }
+}
+
+.documentInput {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  label {
+    font-size: 0.8rem;
+  }
+}
+
+.selected {
+  justify-content: space-between !important;
+  pointer-events: none;
+  user-select: none;
+
+  .preview_btn {
+    background: none;
+    outline: none;
+    border: none;
+    pointer-events: all;
+
+    svg {
+      color: color(foreground);
+    }
+  }
+}

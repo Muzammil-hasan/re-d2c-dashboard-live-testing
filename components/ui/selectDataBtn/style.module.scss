@@ -1,0 +1,25 @@
+@import "~/styles/partials/config";
+
+.selectSection {
+  display: flex;
+  align-items: center;
+}
+
+.verticalDivider {
+  height: 20px;
+  width: 1px;
+  background-color: color(secondary-border);
+  margin: 0px 20px 0 20px;
+
+  @include mobile {
+    display: none;
+  }
+}
+.selectData {
+  .selectText {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: color(muted-foreground);
+  }
+}
